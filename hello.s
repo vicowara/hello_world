@@ -7,12 +7,12 @@ msg:	.asciz "Hello, World!\n"
 
 .text
 main:
-	movq	$0x04, %rax
-	movq	$0x00, %rbx
-	movq	$msg, %rcx
+	movq	$1, %rax
+	xor	%rdi, %rdi
+	movq	$msg, %rsi
 	movq	$14, %rdx
-	int	$0x80
+	syscall
 
-	movq	$0x01, %rax
-	movq	$0x00, %rbx
-	int	$0x80
+	movq	$60, %rax
+	xor	%rdi, %rdi
+	syscall
