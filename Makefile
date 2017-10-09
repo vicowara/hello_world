@@ -21,4 +21,4 @@ dump.o: dump.s
 	as -o $@ $^
 
 dump.s: hello
-	$(shell ./dump.sh)
+	$(shell ./dump.sh $^ $@)
