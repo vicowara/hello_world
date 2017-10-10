@@ -9,7 +9,7 @@ distclean:
 	$(RM) *.o dump dump.s hello
 
 hello: hello.o
-	ld -o $@ -e main $^
+	ld -o $@ $^
 
 hello.o: hello.s
 	as -o $@ $^

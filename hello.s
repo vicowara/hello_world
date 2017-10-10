@@ -2,11 +2,11 @@
 .data
 msg:	.asciz "Hello, World!\n"
 
-.global main
-	.type main, @function
+.global _start
+	.type _start, @function
 
 .text
-main:
+_start:
 	movq	$1, %rax
 	xor	%rdi, %rdi
 	movq	$msg, %rsi
